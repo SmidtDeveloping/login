@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         :root {
+            --pink: #ff4081
+        }
+        
+        body {
+            margin: 0;
+            background-color: #232e33;
+        }
+        
+        #navbar {
+            width: 100vw;
+            background-color: #192024;
+        }
+        
+        ul {
+            list-style: none;
+            margin: 0;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            padding: 1em 0;
+        }
+        
+        li a {
+            text-decoration: none;
+            color: #ffffff;
+            padding-right: 3em;
+            position: relative;
+        }
+        
+        li span {
+            text-decoration: none;
+            color: #ffffff;
+            padding-right: 65em;
+            position: relative;
+        }
+        
+        li a::after {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 0.4em;
+            width: 0%;
+            background-color: var(--pink);
+            bottom: -1em;
+        }
+        
+        li a:hover::after {
+            width: 100%;
+        }
+        
+        li:last-child {
+            margin-left: auto;
+        }
+        
+        li:first-child {
+            margin-left: 3em;
+        }
+        
+        li:nth-child(3) {
+            margin-left: center
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="navbar">
+        <ul>
+            <li>
+                <a href="/home">Home</a>
+            </li>
+            <li>
+                <a href="/about">About</a>
+            </li>
+            <li>
+                <span class="current">Current Account:  <%= name %> (  <%= email %> ) </span>
+            </li>
+            <li>
+                <a href="/ep/profile">Admin Panel</a>
+            </li>
+            <li>
+                <a href="/ep/profile">My Account</a>
+            </li>
+
+        </ul>
+    </div>
+</body>
+
+</html>
